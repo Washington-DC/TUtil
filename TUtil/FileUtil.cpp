@@ -15,4 +15,11 @@ std::string FileUtil::GetApplicationPath()
 void FileUtil::GetAllFiles(std::string dirPath,std::string filter, std::vector<std::string>& fileList)
 {
 	WIN32_FIND_DATA fd = { 0 };
+	int nLength = dirPath.length();
+	if (dirPath[nLength-1] != '\\')
+	{
+		dirPath += "\\";
+	}
+
+
 }
