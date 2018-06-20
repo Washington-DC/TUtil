@@ -24,7 +24,10 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="CalcTest.h">
+    <ClInclude Include="FileUtil_Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CalcUtil_Test.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +35,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ConsoleApplicationTest.cpp">
+    <ClCompile Include="TUtil_Test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

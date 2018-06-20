@@ -26,8 +26,7 @@ public:
 	{
 		if (b == 0)
 		{
-			assert(0);
-			return 0;
+			throw 0;
 		}
 		return a / b;
 	}
@@ -55,8 +54,7 @@ public:
 	{
 		if (b == 0)
 		{
-			assert(0);
-			return 0;
+			throw 0;
 		}
 		return a / b;
 	}

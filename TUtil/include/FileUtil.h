@@ -1,11 +1,11 @@
 #pragma once
 #include "Base.h"
-#include <vector>
+
 class DLL_EXPORT FileUtil
 {
 public:
 	static OString GetApplicationPath();
-	static void GetAllFiles(OString dirPath, OString filter, std::vector<OString>& fileList, bool recursive = true);
-	static OString GetFileName(OString& path);
+	/*static void GetAllFiles(OChar* dirPath, OChar* filter, std::vector<OChar*>& fileList, bool recursive = true);
+		static OChar* GetFileName(OChar* path);*/
 };
 

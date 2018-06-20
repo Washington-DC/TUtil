@@ -3,7 +3,8 @@
 #pragma once
 #include "stdafx.h"
 
-#include "CalcTest.h"
+#include "CalcUtil_Test.h"
+#include "FileUtil_Test.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
