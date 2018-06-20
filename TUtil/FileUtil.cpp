@@ -4,22 +4,47 @@
 #include <Shlwapi.h> 
 #pragma comment(lib,"Shlwapi.lib")
 
-std::string FileUtil::GetApplicationPath()
+OString FileUtil::GetApplicationPath()
 {
-	char szPath[MAX_PATH] = { 0 };
-	GetModuleFileNameA(nullptr, szPath, MAX_PATH);
-	PathRemoveFileSpecA(szPath);
-	return std::string(szPath);
+	OChar szPath[MAX_PATH] = { 0 };
+	GetModuleFileName(nullptr, szPath, MAX_PATH);
+	PathRemoveFileSpec(szPath);
+	return OString(szPath);
 }
 
-void FileUtil::GetAllFiles(std::string dirPath,std::string filter, std::vector<std::string>& fileList)
+void FileUtil::GetAllFiles(OString dirPath, OString filter, std::vector<OString>& fileList,bool recursive)
 {
-	WIN32_FIND_DATA fd = { 0 };
+	WIN32_FIND_DATA findFileData = { 0 };
 	int nLength = dirPath.length();
 	if (dirPath[nLength-1] != '\\')
 	{
-		dirPath += "\\";
+		dirPath += '\\';
 	}
+	OString iFile = dirPath + filter;
+	HANDLE hHandle = FindFirstFile(iFile.c_str(), &findFileData);
 
+	if (hHandle!=INVALID_HANDLE_VALUE)
+	{
+		do
+		{
+			if (findFileData.cFileName == TEXT(".") || findFileData.cFileName == TEXT(".."))
+			{
+				continue;
+			}
+			else if (findFileData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
+			{
+				GetAllFiles(dirPath, filter, fileList, recursive);
+			}
+			else
+			{
+				fileList.push_back(dirPath + findFileData.cFileName);
+			}
+		} while (FindNextFile(hHandle, &findFileData));
+	}
+}
 
+OString FileUtil::GetFileName(OString& path)
+{
+	int iPos = path.find_last_of('\\');
+	return path.substr(iPos + 1, path.length() - iPos - 1);
 }

@@ -1,19 +1,14 @@
 // ConsoleApplicationTest.cpp : 定义控制台应用程序的入口点。
 //
-
+#pragma once
 #include "stdafx.h"
 
-#include <string>
-
-#include "..\TUtil\include\TUtil.h"
-#pragma comment(lib,"..\\bin\\TUtil_d.lib")
+#include "CalcTest.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	std::cout << CalcUtil::Add(1, 2) << std::endl;
-
-	std::cout << FileUtil::GetApplicationPath() << std::endl;
-
+	testing::InitGoogleTest(&argc, argv);
+	RUN_ALL_TESTS();
 	return 0;
 }
 

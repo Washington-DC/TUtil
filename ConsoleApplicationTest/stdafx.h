@@ -11,5 +11,11 @@
 #include <tchar.h>
 
 
-
 // TODO:  在此处引用程序需要的其他头文件
+#include <string>
+
+#include "../TUtil/include/TUtil.h"
+#pragma comment(lib,"../bin/TUtil_d.lib")
+
+#include "gtest/gtest.h"
+#pragma comment(lib,"googletest/lib/gtestd.lib")
