@@ -35,3 +35,6 @@ TEST(FileUtil_Test, test_GetAllFiles_01)
 	EXPECT_STREQ(FileUtil::GetFileName(strFolder).c_str(),_T("TUtil"));
 }
 
+
+
+

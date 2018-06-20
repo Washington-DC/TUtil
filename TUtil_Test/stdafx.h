@@ -15,7 +15,16 @@
 #include <string>
 
 #include "../TUtil/include/TUtil.h"
-#pragma comment(lib,"../bin/TUtil_d.lib")
-
 #include "gtest/gtest.h"
+#include "gmock/gmock.h"
+
+
+#ifdef _DEBUG
+#pragma comment(lib,"../bin/TUtil_ud.lib")
 #pragma comment(lib,"googletest/lib/gtestd.lib")
+#pragma comment(lib,"googletest/lib/gmockd.lib")
+#else
+#pragma comment(lib,"../bin/TUtil_u.lib")
+#pragma comment(lib,"googletest/lib/gtest.lib")
+#pragma comment(lib,"googletest/lib/gmock.lib")
+#endif // _DEBUG

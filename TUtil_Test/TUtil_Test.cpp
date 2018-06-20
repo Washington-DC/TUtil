@@ -14,6 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	testing::GTEST_FLAG(output) = "xml:";
 	testing::AddGlobalTestEnvironment(new BaseEnvironment);
 	testing::InitGoogleTest(&argc, argv);
+	testing::InitGoogleMock(&argc, argv);
 	RUN_ALL_TESTS();
 	return 0;
 }
