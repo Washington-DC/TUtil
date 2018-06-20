@@ -1,4 +1,4 @@
-
+#pragma once
 #include "iostream"
 #include "tchar.h"
 #include <memory>
@@ -7,6 +7,7 @@
 
 #define EXTERN_C_BEGIN	extern "C" {
 #define EXTERN_C_END	}
+
 
 #ifdef _UNICODE
 #define OString		std::wstring

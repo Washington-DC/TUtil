@@ -5,7 +5,10 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TUtil", "TUtil\TUtil.vcxproj", "{DC4626A2-C6B5-4D2C-B905-4521E953787C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplicationTest", "ConsoleApplicationTest\ConsoleApplicationTest.vcxproj", "{44ABE431-673F-4E9B-88D6-678380A9BDCA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TUtil_Test", "ConsoleApplicationTest\ConsoleApplicationTest.vcxproj", "{44ABE431-673F-4E9B-88D6-678380A9BDCA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DC4626A2-C6B5-4D2C-B905-4521E953787C} = {DC4626A2-C6B5-4D2C-B905-4521E953787C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
