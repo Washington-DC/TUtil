@@ -31,7 +31,7 @@ TEST(FileUtil_Test, test_GetAllFiles_01)
 	OString strFolder = FileUtil::GetFolder(FileUtil::GetApplicationPath());
 	std::vector<OString> fileList;
 	FileUtil::GetAllFiles(strFolder, _T("*"), fileList,false);
-	EXPECT_EQ(fileList.size(), 4) << "size: " << fileList.size();
+	EXPECT_EQ(fileList.size(), 4) << _T("____ actual size ____: ") << fileList.size();
 	EXPECT_STREQ(FileUtil::GetFileName(strFolder).c_str(),_T("TUtil"));
 }
 

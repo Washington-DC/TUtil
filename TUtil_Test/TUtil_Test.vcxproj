@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{44ABE431-673F-4E9B-88D6-678380A9BDCA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>ConsoleApplicationTest</RootNamespace>
+    <RootNamespace>TUtil_Test</RootNamespace>
     <ProjectName>TUtil_Test</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -68,7 +68,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\code2\TUtil\ConsoleApplicationTest\googletest\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\code2\TUtil\TUtil_Test\googletest\include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|Win32'">
@@ -136,8 +136,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseEnvironment.h" />
     <ClInclude Include="CalcUtil_Test.h" />
     <ClInclude Include="FileUtil_Test.h" />
+    <ClInclude Include="Other_Test.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
