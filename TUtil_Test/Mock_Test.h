@@ -3,7 +3,7 @@
 
 
 /************************************************************************/
-/* So GoogleMock ²»Ö§³Ö std::wstring                                                                     */
+/* So GoogleMock don't support std::wstring                                                                     */
 /************************************************************************/
 class User
 {
@@ -96,7 +96,6 @@ TEST(MockTest, test_Add_03)
 	MockUser user;
 	EXPECT_CALL(user, Add(_any, _any)).WillOnce(testing::Return(12));
 	EXPECT_EQ(user.Add(2, 2), 12);
-	/*EXPECT_EQ(user.Add(2, 2), 0);
-	EXPECT_EQ(user.Add(2, 2), 0);*/
 }
+
 
