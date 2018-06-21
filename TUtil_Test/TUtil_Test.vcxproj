@@ -134,9 +134,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="BaseEnvironment.h" />
     <ClInclude Include="CalcUtil_Test.h" />
     <ClInclude Include="FileUtil_Test.h" />
