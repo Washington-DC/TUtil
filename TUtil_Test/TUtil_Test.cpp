@@ -6,6 +6,7 @@
 #include "CalcUtil_Test.h"
 #include "FileUtil_Test.h"
 #include "Other_Test.h"
+#include "String_Test.h"
 
 //#include "BaseEnvironment.h"
 

@@ -3,8 +3,8 @@
 
 TEST(FileUtil_Test, test_GetApplicationPath_01)
 {
-	OString strPath = FileUtil::GetApplicationPath();
-	OString strParent = strPath.substr(strPath.length() - 3, 3);
+	TString strPath = FileUtil::GetApplicationPath();
+	TString strParent = strPath.substr(strPath.length() - 3, 3);
 
 	EXPECT_STRNE(strPath.c_str(), _T(""));
 	EXPECT_STREQ(strParent.c_str(), _T("bin"));
@@ -28,13 +28,19 @@ TEST(FileUtil_Test, test_GetFolder_01)
 
 TEST(FileUtil_Test, test_GetAllFiles_01)
 {
-	OString strFolder = FileUtil::GetFolder(FileUtil::GetApplicationPath());
-	std::vector<OString> fileList;
+	TString strFolder = FileUtil::GetFolder(FileUtil::GetApplicationPath());
+	std::vector<TString> fileList;
 	FileUtil::GetAllFiles(strFolder, _T("*"), fileList,false);
 	EXPECT_EQ(fileList.size(), 4) << _T("____ actual size ____: ") << fileList.size();
 	EXPECT_STREQ(FileUtil::GetFileName(strFolder).c_str(),_T("TUtil"));
 }
 
+
+TEST(FileUtil_Test, test_OpenFileDialog_01)
+{
+	TString strFile = FileUtil::OpenFileDialog(TRUE,_T("打开文件"), _T("文本文件(*.txt)\0*.txt\0\0"));
+	EXPECT_NE(_tcscmp(strFile.c_str(),_T("")),0) << _T("___file___:") << strFile ;
+}
 
 
 

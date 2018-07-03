@@ -24,9 +24,6 @@
     <ClInclude Include="include\FileUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="include\StringUtil.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="include\TUtil.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -34,6 +31,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\StringUtil.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ServiceHelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\win32util.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -51,6 +60,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TString.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

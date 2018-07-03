@@ -30,6 +30,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="String_Test.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

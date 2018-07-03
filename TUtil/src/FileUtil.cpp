@@ -4,15 +4,25 @@
 #include <Shlwapi.h> 
 #pragma comment(lib,"Shlwapi.lib")
 
-OString FileUtil::GetApplicationPath()
+TString FileUtil::GetApplicationPath()
 {
-	OChar szPath[MAX_PATH] = { 0 };
+	TCHAR szPath[MAX_PATH] = { 0 };
 	GetModuleFileName(nullptr, szPath, MAX_PATH);
 	PathRemoveFileSpec(szPath);
-	return OString(szPath);
+	return TString(szPath);
 }
 
-void FileUtil::GetAllFiles(OString dirPath, OString filter, std::vector<OString>& fileList, bool recursive)
+//********************************************************************     
+// 函数说明：	遍历文件夹下的所有文件     
+// 作者：	yszs     
+// 时间：	2018/07/02 11:21     
+// 返回值:  	void     
+// 参数: 	OString dirPath    文件夹名称 
+// 参数: 	OString filter     过滤器
+// 参数: 	std::vector<OString> & fileList     
+// 参数: 	bool recursive     是否遍历子文件夹
+//******************************************************************** 
+void FileUtil::GetAllFiles(TString dirPath, TString filter, std::vector<TString>& fileList, bool recursive)
 {
 	WIN32_FIND_DATA findFileData = { 0 };
 	int nLength = dirPath.length();
@@ -20,7 +30,7 @@ void FileUtil::GetAllFiles(OString dirPath, OString filter, std::vector<OString>
 	{
 		dirPath += _T('\\');
 	}
-	OString iFile = dirPath + filter;
+	TString iFile = dirPath + filter;
 	HANDLE hHandle = FindFirstFile(iFile.c_str(), &findFileData);
 
 	if (hHandle != INVALID_HANDLE_VALUE)
@@ -43,25 +53,27 @@ void FileUtil::GetAllFiles(OString dirPath, OString filter, std::vector<OString>
 	}
 }
 
-OString FileUtil::GetFileName(OString path)
+TString FileUtil::GetFileName(TString path)
 {
 	if (!path.empty())
 	{
 		int iPos = path.find_last_of(_T('\\'));
-		if (iPos != OString::npos)
+		if (iPos != TString::npos)
 			return path.substr(iPos + 1, path.length() - iPos - 1);
 	}
 	return path;
 }
 
-OString FileUtil::GetFolder(OString path)
+TString FileUtil::GetFolder(TString path)
 {
 	if (!path.empty())
 	{
 		int iPos = path.find_last_of(_T('\\'));
-		if (iPos != OString::npos)
+		if (iPos != TString::npos)
 			return path.substr(0, iPos);
 	}
 	return _T("");
 }
+
+
 

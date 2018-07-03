@@ -13,7 +13,7 @@ public:
 		return false;
 	}
 
-	bool WStringTest(OChar* name)
+	bool WStringTest(TCHAR* name)
 	{
 		return false;
 	}
@@ -40,7 +40,7 @@ public:
 	MOCK_METHOD2(Login, bool(std::string username, std::string password));
 	MOCK_METHOD2(Add, int(int, int));
 	MOCK_METHOD1(SetAge, int(int nAge));
-	MOCK_METHOD1(WStringTest, bool(OChar*));
+	MOCK_METHOD1(WStringTest, bool(TCHAR*));
 	MOCK_METHOD0(GetAge, int());
 };
 

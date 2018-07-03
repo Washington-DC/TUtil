@@ -36,7 +36,7 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -219,8 +219,11 @@
     <ClInclude Include="include\FileUtil.h" />
     <ClInclude Include="include\StringUtil.h" />
     <ClInclude Include="include\TUtil.h" />
+    <ClInclude Include="include\ServiceHelper.h" />
+    <ClInclude Include="include\win32util.h" />
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="include\TString.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FileUtil.cpp" />
@@ -254,6 +257,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\TUtil.cpp" />
+    <ClCompile Include="src\TString.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TUtil.def" />
