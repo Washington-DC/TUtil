@@ -14,6 +14,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Service", "Service\Service.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiPromptBox", "DuiPromptBox\DuiPromptBox.vcxproj", "{19805DE9-3B13-4EFA-8CAE-527D4DF2D684}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageHosting", "ImageHosting\ImageHosting.vcxproj", "{F366B1D7-65B8-482B-8F47-5085AEA769B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Qiniu_Test", "Qiniu_Test\Qiniu_Test.vcxproj", "{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -72,6 +76,30 @@ Global
 		{19805DE9-3B13-4EFA-8CAE-527D4DF2D684}.UnicodeDebug|Win32.Build.0 = Debug|Win32
 		{19805DE9-3B13-4EFA-8CAE-527D4DF2D684}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
 		{19805DE9-3B13-4EFA-8CAE-527D4DF2D684}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.Debug|Win32.Build.0 = Debug|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.Release|Win32.ActiveCfg = Release|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.Release|Win32.Build.0 = Release|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.StaticDebug|Win32.ActiveCfg = Debug|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.StaticDebug|Win32.Build.0 = Debug|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.StaticRelease|Win32.ActiveCfg = Release|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.StaticRelease|Win32.Build.0 = Release|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{F366B1D7-65B8-482B-8F47-5085AEA769B0}.UnicodeRelease|Win32.Build.0 = Release|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.Debug|Win32.Build.0 = Debug|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.Release|Win32.ActiveCfg = Release|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.Release|Win32.Build.0 = Release|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.StaticDebug|Win32.ActiveCfg = Debug|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.StaticDebug|Win32.Build.0 = Debug|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.StaticRelease|Win32.ActiveCfg = Release|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.StaticRelease|Win32.Build.0 = Release|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.UnicodeDebug|Win32.ActiveCfg = Debug|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.UnicodeDebug|Win32.Build.0 = Debug|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.UnicodeRelease|Win32.ActiveCfg = Release|Win32
+		{E682F2BD-EE04-45BF-B3DF-087DD01ACBDB}.UnicodeRelease|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
