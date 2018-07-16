@@ -36,6 +36,16 @@ void CMainWindow::Notify(TNotifyUI& msg)
 	if (lstrcmp(msg.sType,DUI_MSGTYPE_WINDOWINIT)==0)
 	{
 		m_pTreeView = static_cast<CTreeViewUI*>(m_PaintManager.FindControl(_T("tree_view")));
+
+		m_pUploadPage	= (CContainerUI*)m_PaintManager.FindControl(_T("tab_image_upload_page"));
+		m_pBrowerPage	= (CContainerUI*)m_PaintManager.FindControl(_T("tab_image_browser_page"));
+		m_pQiniuPage	= (CContainerUI*)m_PaintManager.FindControl(_T("tab_qiniur_page"));
+		m_pGithubPage	= (CContainerUI*)m_PaintManager.FindControl(_T("tab_github_page"));
+		m_pSettingPage	= (CContainerUI*)m_PaintManager.FindControl(_T("tab_setting_page"));
+
+		CTreeNodeUI* pTreeNode = static_cast<CTreeNodeUI*>(m_PaintManager.FindControl(_T("btn_hosting_setting_page")));
+		CCheckBoxUI* pCheckBox = pTreeNode->GetFolderButton();
+		m_pTreeView->SetItemExpand(false, pTreeNode);
 	}
 	if (lstrcmp(msg.sType,DUI_MSGTYPE_ITEMCLICK) == 0)
 	{

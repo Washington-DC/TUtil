@@ -13,10 +13,9 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 {
 	CPaintManagerUI::SetInstance(hInstance);
 
-	CMainWindow duiFrame;
-	duiFrame.Create(NULL, L"DuiMainWnd", UI_WNDSTYLE_FRAME/*WS_CLIPSIBLINGS*/, WS_EX_WINDOWEDGE);
-
-	duiFrame.CenterWindow();
-	duiFrame.ShowModal();
+	CMainWindow mainWindow;
+	mainWindow.Create(NULL, L"ImageHosting", UI_WNDSTYLE_FRAME/*WS_CLIPSIBLINGS*/, WS_EX_WINDOWEDGE);
+	mainWindow.CenterWindow();
+	mainWindow.ShowModal();
 
 }
